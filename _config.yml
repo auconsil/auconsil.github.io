@@ -19,6 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The auconsil blog
+subtitle: Technology - Digital- Architecture
+name: Jörg Aulich
 email: joerg.aulich@auconsil.com
 description: >- # this means to ignore newlines until "baseurl:"
   In this blog I write (irregularly) about the topics that 
@@ -26,15 +28,22 @@ description: >- # this means to ignore newlines until "baseurl:"
   software architectures, the way we work. Not always with a common 
   thread but always highly opinionated.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://auconsil.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: auconsil
+github_username:  auconsil
+
+repository: auconsil/auconsil.github.io
+logo: "/assets/general/logo.png"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+minimal_mistakes_skin: "default"
+search: true
+date_format: "%Y-%m-%d"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -55,3 +64,21 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+author:
+  name: "Jörg Aulich"
+  bio: "Enthusiastic in everything that has to do with technology. Always looking for something new."
+  location: "Frankfurt, Germany"
+
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      show_date: true
+      read_time: true
+      comments: false
